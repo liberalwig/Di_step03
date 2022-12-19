@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(SpringExtension.class)
+@ExtendWith(SpringExtension.class) // @ExtendWith: 스프링컨테이너 제작시 필요한 빈만 올려주는 기능
 @ContextConfiguration("classpath:applicationContext.xml")
 // @ContextConfiguration(classes = {ApplicationConfig1.class})
 class ContainerTest {
@@ -23,7 +23,7 @@ class ContainerTest {
 
     @AfterEach
     public void printBean() {
-        System.out.println("===============bean names===============");
+        System.out.println("===============Bean Names===============");
         String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
         System.out.println(Arrays.toString(beanDefinitionNames));
     }
