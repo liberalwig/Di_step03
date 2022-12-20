@@ -36,10 +36,11 @@ class ContainerTest {
     }
 
     @Test
-    @DisplayName("Case1 : Xml + Component Scan")
+    @DisplayName("Case1 : Xml + ComponentScan")
     void xmlWithContainer() {
 
         BookService service = ctx.getBean(BookService.class);
+
         System.out.println("===============Service InitVal===============");
         service.getVal();
         System.out.println("===============Repository DB Connection Validate===============");
@@ -88,7 +89,7 @@ class ContainerTest {
     }
 
     @Test
-    @DisplayName("Case5: SpringBoot ComponentScan ")
+    @DisplayName("Case5: SpringBoot ComponentScan")
     void classWithContainer4() {
         ctx = new AnnotationConfigApplicationContext(LessonApplication.class, ApplicationConfig3.class);
     }
