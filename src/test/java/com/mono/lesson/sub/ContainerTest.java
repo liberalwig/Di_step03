@@ -38,7 +38,6 @@ class ContainerTest {
     @Test
     @DisplayName("Case1 : Xml + ComponentScan")
     void xmlWithContainer() {
-
         BookService service = ctx.getBean(BookService.class);
 
         System.out.println("===============Service InitVal===============");
@@ -50,7 +49,6 @@ class ContainerTest {
     @Test
     @DisplayName("Case2: Java Class + Bean Method")
     void classWithContainer1() {
-
         BookService service = ctx.getBean(BookService.class);
 
         // @PostConstruct
@@ -68,8 +66,8 @@ class ContainerTest {
     @Test
     @DisplayName("Case3: Java Class + String ComponentScan") // 문제점: typeSafe 하지 않다. 실행해봐야 오류를 그제서야 냄
     void classWithContainer2() {
-
         BookService service = ctx.getBean(BookService.class);
+
         // @PostConstruct
         System.out.println("===============Service InitVal===============");
         service.getVal();
@@ -81,6 +79,7 @@ class ContainerTest {
     @DisplayName("Case4 : Java Class + Typesafe ComponentScan")
     void classWithContainer3() {
         BookService service = ctx.getBean(BookService.class);
+
         // @PostConstruct
         System.out.println("===============Service InitVal===============");
         service.getVal();
