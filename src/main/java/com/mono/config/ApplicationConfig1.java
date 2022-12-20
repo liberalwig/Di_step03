@@ -28,6 +28,4 @@ public class ApplicationConfig1 {
         bookService.setRepository(bookRepository1());
         return bookService;
     }
-
-
 }

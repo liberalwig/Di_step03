@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // @SpringBootTest
 @ExtendWith(SpringExtension.class) // @ExtendWith: 스프링컨테이너 제작시 필요한 빈만 올려주는 기능
 // @ContextConfiguration("classpath:applicationContext.xml")
-@ContextConfiguration(classes = {ApplicationConfig2.class})
+@ContextConfiguration(classes = {ApplicationConfig3.class})
 class ContainerTest {
 
     @Autowired
