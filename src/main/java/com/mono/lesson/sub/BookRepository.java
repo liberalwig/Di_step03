@@ -1,12 +1,14 @@
 package com.mono.lesson.sub;
 
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class BookRepository {
 
     private Boolean connectionStatus = false;
+
 
     public BookRepository() {
         System.out.println("BookRepository 생성자 호출됨");
